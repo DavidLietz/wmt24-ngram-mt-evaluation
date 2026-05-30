@@ -1,0 +1,4 @@
+comparison,scope,spearman_rho,spearman_pvalue,kendall_tau,kendall_pvalue
+Systemrankings: Wort-1–4-F1 vs. Zeichen-1–6-F-Score,"26 systems, human reference A, system-only ranks",0.9787961696306428,4.8941291118905645e-18,0.9074074074074073,8.970113333501694e-11
+Wortbasierter 1–4-Gramm-F1: Human reference vs. pseudo-reference,"25 systems, pseudo-reference self-comparison excluded",0.9345902270103885,8.296889173897345e-12,0.8193979933110368,1.0338156542992606e-08
+Zeichenbasierter 1–6-Gramm-F-Score: Human reference vs. pseudo-reference,"25 systems, pseudo-reference self-comparison excluded",0.926894959599846,2.8693351940886432e-11,0.8127090301003345,1.3600000867419129e-08

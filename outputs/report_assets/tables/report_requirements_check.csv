@@ -1,0 +1,10 @@
+requirement,status,evidence
+Ein Sprachpaar wurde ausgewählt.,erfüllt,Sprachpaar en-de.
+Alle Übersetzungen des Sprachpaars werden betrachtet.,erfüllt,26/26 Systemausgaben vollständig geladen und geprüft.
+Metriken mit unterschiedlichen Texteinheiten oder n-Gramm-Längen werden verwendet.,erfüllt,Wortbasierter 1–4-Gramm-F1 und zeichenbasierter 1–6-Gramm-F-Score.
+Metrikwerte werden für jede maschinelle Übersetzung berechnet.,erfüllt,26 Systeme in report_compact_main_results.csv.
+Die Übersetzungen werden nach Metrikwerten geordnet.,erfüllt,Systemränge in report_main_system_ranking.csv.
+Die optimale maschinelle Übersetzung wird als Pseudo-Referenz verwendet.,erfüllt,Pseudo-Referenzen in pseudo_reference_overview.csv und bereinigte Rangvergleiche in report_pseudoref_ranking_comparison_no_self.csv.
+Die zwei Rangfolgen werden verglichen.,erfüllt,Rangänderungen und Korrelationen in report_corrected_rank_correlations.csv.
+"Daten werden tabellarisch beschrieben, inklusive Domänen und Wortanzahl im Quelltext.",erfüllt,5 Domänenzeilen in report_dataset_summary_by_domain.csv.
+Ergebnisse werden qualitativ diskutierbar gemacht.,erfüllt,8 ausgewählte Metrikabweichungsbeispiele.

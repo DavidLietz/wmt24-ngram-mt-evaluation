@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+data/raw/
+data/processed/
+
+outputs/tables/
+outputs/figures/
+outputs/logs/
+outputs/**/*.zip
+
+.DS_Store
+Thumbs.db

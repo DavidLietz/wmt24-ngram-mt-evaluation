@@ -1,0 +1,5 @@
+pseudo_reference_metric,pseudo_reference,candidate,score,rank_among_non_self_candidates
+char_1_6_chrf_like,Claude-3.5,reference_B,66.52831826067398,17
+char_1_6_chrf_like,Claude-3.5,reference_A,64.27992903922272,22
+word_1_4_f1,TranssionMT,reference_B,42.90083626861816,18
+word_1_4_f1,TranssionMT,reference_A,40.19116168684909,22

@@ -41,3 +41,45 @@ python -m venv .venv
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 python src/run_pipeline.py
+```
+
+## Projektstruktur
+
+```txt
+src/
+  download_wmt24.py
+  inspect_wmt24.py
+  evaluate_metrics.py
+  build_report_assets.py
+  build_report_supplements.py
+  run_pipeline.py
+
+outputs/
+  report_assets/
+    tables/
+    figures/
+```
+
+## Zentrale Ausgaben
+
+Nach erfolgreicher Ausführung befinden sich berichtsnahe Tabellen und Abbildungen unter:
+
+```txt
+outputs/report_assets/
+```
+
+Wichtige Ergebnisdateien sind unter anderem:
+
+```txt
+outputs/report_assets/report_key_findings.md
+outputs/report_assets/report_requirements_check.md
+outputs/report_assets/tables/report_main_system_ranking.csv
+outputs/report_assets/tables/report_dataset_summary_by_domain.csv
+outputs/report_assets/tables/report_corrected_rank_correlations.csv
+outputs/report_assets/tables/report_pseudoref_ranking_comparison_no_self.csv
+outputs/report_assets/figures/
+```
+
+## Reproduzierbarkeit
+
+Die Pipeline lädt die Daten neu, prüft die Vollständigkeit der Systemausgaben, berechnet alle Metriken und erzeugt die berichtsnahen Ergebnisartefakte reproduzierbar aus den Rohdaten.

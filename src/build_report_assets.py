@@ -259,14 +259,16 @@ def plot_main_top_systems(main_system_ranking: pd.DataFrame) -> None:
         rank_col = f"system_rank_{metric}"
         top = main_system_ranking.sort_values(rank_col).head(12)
 
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots(figsize=(12, 7.5))
         ax.barh(top["candidate"], top[metric])
         ax.invert_yaxis()
-        ax.set_xlabel("Durchschnittlicher Segmentwert")
-        ax.set_ylabel("System")
-        ax.set_title(f"Top-12-Systeme nach {METRIC_LABELS[metric]}")
-        fig.tight_layout()
-        fig.savefig(REPORT_FIGURE_DIR / f"report_top12_{metric}.png", dpi=200)
+        ax.set_xlabel("Durchschnittlicher Segmentwert", fontsize=12)
+        ax.set_ylabel("System", fontsize=12)
+        ax.set_title(f"Top-12-Systeme nach {METRIC_LABELS[metric]}", fontsize=13, pad=12)
+        ax.tick_params(axis="both", labelsize=11)
+        ax.grid(axis="x", linestyle=":", linewidth=0.6, alpha=0.7)
+        fig.tight_layout(pad=1.2)
+        fig.savefig(REPORT_FIGURE_DIR / f"report_top12_{metric}.png", dpi=300)
         plt.close(fig)
 
 
@@ -275,14 +277,16 @@ def plot_pseudoref_rank_delta(pseudo_comparison: pd.DataFrame) -> None:
         subset = pseudo_comparison[pseudo_comparison["metric"] == metric].copy()
         subset = subset.sort_values("rank_delta")
 
-        fig, ax = plt.subplots(figsize=(10, 7))
+        fig, ax = plt.subplots(figsize=(12, 9))
         ax.barh(subset["candidate"], subset["rank_delta"])
         ax.axvline(0, linewidth=1)
-        ax.set_xlabel("Rangänderung: Pseudo-Referenzrang minus Rang gegen menschliche Referenz")
-        ax.set_ylabel("System")
-        ax.set_title(f"Rangänderungen ohne Selbstvergleich: {METRIC_LABELS[metric]}")
-        fig.tight_layout()
-        fig.savefig(REPORT_FIGURE_DIR / f"report_pseudoref_rank_delta_{metric}.png", dpi=200)
+        ax.set_xlabel("Rangänderung (Pseudo-Referenz minus menschliche Referenz)", fontsize=12)
+        ax.set_ylabel("System", fontsize=12)
+        ax.set_title(f"Rangänderungen ohne Selbstvergleich: {METRIC_LABELS[metric]}", fontsize=13, pad=12)
+        ax.tick_params(axis="both", labelsize=10)
+        ax.grid(axis="x", linestyle=":", linewidth=0.6, alpha=0.7)
+        fig.tight_layout(pad=1.2)
+        fig.savefig(REPORT_FIGURE_DIR / f"report_pseudoref_rank_delta_{metric}.png", dpi=300)
         plt.close(fig)
 
 
